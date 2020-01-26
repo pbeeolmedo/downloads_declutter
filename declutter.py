@@ -17,7 +17,7 @@ pathname = "/Users/pablo/Downloads/"
 
 folder_dict = { "pdf":["pdf"],\
                 "music":["mp3","wav"],\
-                "images":["png","jpg","HEIC","svg","eps","jpeg"],\
+                "images":["png","dng,""jpg","HEIC","svg","eps","jpeg"],\
                 "videos":["mov","mp4"],\
                 "code":["sh","py","m"],\
                 "application_installers":["dmg"],\
@@ -33,7 +33,7 @@ folder_dict = { "pdf":["pdf"],\
 year_month_today = yyyy_mm(time.time())
 
 
-for filepath in iglob(f"{pathname}*"):
+for filepath in iglob(f"{pathname}*.*"):
     filename = filepath[len(pathname):]
     if filename.startswith("~$"):
         continue
